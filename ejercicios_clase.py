@@ -26,20 +26,25 @@ def ej1():
     # para que el "while" itere siempre que <x sea menor a 6>
     # Además, complete la línea de código necesaria para que
     # el valor de "x" incremente "1" en cada iteración
+    cota_superior = 6
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
-        print("Valor de x =", x)
+    while x < cota_superior:    # reemplace "condicion" por lo que crea necesario
+        print("El Valor de x es:", x)
         # Coloque la línea de código para que "X" incremente "1"
+        x += 1 # Incremento.
+
 
     x = 5
+    print('\n\n')
     # Dado el siguiente "while", complete la condicion
     # para que el "while" itere siempre que <x sea mayor o igual a 0>
     # Además, complete la línea de código necesaria para que
     # el valor de "x" decremente "1" en cada iteración
 
-    while condicion:    # reemplace "condicion" por lo que crea necesario
-        print("Valor de x =", x)
+    while x >= 0:    # reemplace "condicion" por lo que crea necesario
+        print("El Valor de x es:", x)
         # Coloque la línea de código para que "X" decremente "1"
+        x -= 1 # Decremento
 
 
 def ej2():
@@ -125,7 +130,7 @@ def ej6():
 
 
 if __name__ == '__main__':
-    print("Bienvenidos a otra clase de Inove con Python")
+    print("\nBienvenidos a otra clase de Inove con Python.\n\n")
     ej1()
     #ej2()
     #ej3()
