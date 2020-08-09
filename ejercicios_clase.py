@@ -57,11 +57,17 @@ def ej2():
     # Itere el "for" utilizando la lista como parámero
     # y utilizar como elemento del "for" cada color
     # for color ...
+    print('\n\nMuestro los Colores de la lista "colores" Utilizando la misma lista:\n')
+    for color in colores:
+        print('Color: {}'.format(color))
 
     # Itere el "for" utilizando el tamaño de la lista
     # como parámetro y utilizar el índice para acceder a
     # los elementos de la lista
     # for i ...
+    print('\n\nMuestro los Colores de la lista "colores" Utilizando un "índice" y el Tamaño de la lista "colores":\n')
+    for i in range(len(colores)):
+        print('Color: {}'.format(colores[i]))
 
 
 def ej3():
@@ -131,8 +137,8 @@ def ej6():
 
 if __name__ == '__main__':
     print("\nBienvenidos a otra clase de Inove con Python.\n\n")
-    ej1()
-    #ej2()
+    #ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
