@@ -128,16 +128,27 @@ def ej5():
     # Pedir por consola dos números que representen el principio y fin de una
     # secuencia numérica.
     # Realizar un bucle "for" que recorra esa secuencia armada con "range"
-    # y calcule a sumatoria total de todos los números dentro de esa secuencia
+    # y calcule la sumatoria total de todos los números dentro de esa secuencia
     # Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
     # sino que va hasta el anterior
 
-    inicio = int(input('Ingrese el primero número de la secuencia\n'))
-    # fin....
+    inicio = int(input('\n\nIngrese el 1er Número de la Secuencia: '))
+    fin = int(input('\nIngrese el 2do Número de la Secuencia: '))
 
-    # for ... in range(....)
+    secuencia = list(range(inicio, fin + 1))
+
+    print('\n\nEl Rango Ingresado es: [{}, {}]'.format(inicio, fin))
+    print('\nLa Secuencia Armada es: {}'.format(secuencia))
+
+    sumatoria = 0   # Inicialización de la variable
+
+    for i in range(len(secuencia)):
+        sumatoria += secuencia[i]
+
 
     # Imprimir el valor de la sumatoria
+    print('\n\nEl Valor de la Sumatoria de la Secuencia Ingresada es: {}\n\n'.format(sumatoria))
+
 
 
 def ej6():
@@ -165,6 +176,6 @@ if __name__ == '__main__':
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    #ej5()
+    #ej4()
+    ej5()
     #ej6()
