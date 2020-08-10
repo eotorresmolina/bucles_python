@@ -72,12 +72,21 @@ def ej2():
 
 def ej3():
     # Ejemplos con bucles "for"
-
+    print('\n\n')
     # Dado la siguiente lista de números, utilizar "for"
     # para recorrer toda la lista y realizar la sumatoria de todos los números
     # La sumatoria se deberá ir guardando en la variable "suma"
     numeros = [1, 5, -1, 6, 10, 2, -5]
     suma = 0   # Variable ya inicializada, la suma arranca en cero
+
+    len_numeros = len(numeros)
+    print('Los Números son: {}'.format(numeros))
+    
+    for i in range(len_numeros):
+        suma += numeros[i]
+
+    print('La Sumatoria de dichos Números es: {}.\n\n'.format(suma))
+
 
 
 def ej4():
@@ -138,8 +147,8 @@ def ej6():
 if __name__ == '__main__':
     print("\nBienvenidos a otra clase de Inove con Python.\n\n")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
     #ej6()
