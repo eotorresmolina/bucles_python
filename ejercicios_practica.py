@@ -328,7 +328,7 @@ def ej4():
 
 
 def ej5():
-    print("Ahora sí! buena suerte :)")
+    print("Ahora sí! buena suerte :)\n\n")
 
     '''
     Tome el ejercicio:
@@ -394,11 +394,66 @@ def ej5():
 
   '''
 
+    # Inicialización de las Variables:
+
+    palabras = [] # Lista Vacía
+    max_palabra = None
+    max_cant_letras = None
+
+    flag = False  # Variable que Uso como Bandera
+
+    while flag == False:
+
+        print('Bienvenido/a:')
+        print('¿Qué desea Realizar?\n')
+        print('1 - Ordenar Palabras por Orden Alfabético (usando el operador ">")')
+        print('2 - Ordenar Palabras por Cantidad de letras (longitud de la palabra)')
+        print('3 - Salir del programa')
+        opcion = int(input('\nIngrese a Continuación la Opción que Desee: '))
+
+        if ((opcion == 1) or (opcion == 2)):
+
+            cant_palabras_deseadas = int(input('\nIngrese el Nro. de Palabras que Desee Escribir: '))
+            print('\n')
+
+            while cant_palabras_deseadas > 0:
+                palabra = str(input('Ingrese la Palabra que Desee: '))
+                palabras.append(palabra)
+                cant_palabras_deseadas -= 1
+
+            if opcion == 1:
+                for i in range(len(palabras)):
+                    if ((max_palabra is None) or (max_palabra <= palabras[i])):
+                        max_palabra = palabras[i]
+                
+                print('\n\nLa Mayor Palabra Más Grande Alfabéticamente es: "{}"'.format(max_palabra))
+
+
+            if opcion == 2:
+                for i in range(len(palabras)):
+                    if ((max_cant_letras is None) or (len(max_cant_letras) <= len(str(palabras[i])))):
+                        max_cant_letras = palabras[i]
+
+                print('\n\nLa Palabra que Tiene Mayor Cantidad de Letras es: "{}"\n\n'.format(max_cant_letras))
+
+
+        elif opcion == 3:
+            flag = True
+            print('\nEl Programa ha Finalizado.\n\n')
+
+
+        else:
+            print('\n¡¡¡¡ERROR!!!! Se ha Ingresado una Opción Inválida.\n\n')
+            continue
+
+
+
+
 
 if __name__ == '__main__':
     print("\nEjercicios de práctica.\n")
-    #ej1()
-    #ej2()
-    #ej3()
+    ej1()
+    ej2()
+    ej3()
     ej4()
-    #ej5()
+    ej5()
