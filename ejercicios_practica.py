@@ -205,7 +205,7 @@ def ej3():
 
 
 def ej4():
-    print("Mi primer pasito en data analytics")
+    print("Mi primer pasito en Data Analytics:\n")
 
     '''
     Tome el ejercicio:
@@ -213,10 +213,10 @@ def ej4():
     copielo a este ejercicio y modifíquelo para cumplir el
     siguiente requerimiento
 
-    En este ejercicio se lo provee de una lista de temperatuas,
-    esa lista de temperatuas corresponde a los valores de temperaturas
-    tomados durante una temperorada del año en Buenos Aires.
-    Ustede deberá analizar dicha lista para deducir
+    En este ejercicio se lo provee de una lista de temperaturas,
+    esa lista de temperaturas corresponde a los valores de temperaturas
+    tomados durante una temporada del año en Buenos Aires.
+    Usted deberá analizar dicha lista para deducir
     en que temporada del año se realizó el muestreo de temperatura.
     La variable con la lista de temperaturas se llama "temp_dataloger"
     definida al comienzo del archivo
@@ -226,7 +226,7 @@ def ej4():
 
     1 - Obtener la máxima temperatura
     2 - Obtener la mínima temperatura
-    3 - Obtener el promedio de las temperatuas
+    3 - Obtener el promedio de las temperaturas
 
     Los resultados se deberán almacenar en las siguientes variables
     que ya hemos preparado para usted.
@@ -239,10 +239,22 @@ def ej4():
     temperatura_max = None      # Aquí debe ir almacenando la temp máxima
     temperatura_min = None      # Aquí debe ir almacenando la temp mínima
     temperatura_sumatoria = 0   # Aquí debe ir almacenando la suma de todas las temp
-    temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el promedio
-    temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
+    temperatura_promedio = 0    # Al finalizar el loop deberá aquí almacenar el promedio
+    temperatura_len = 0         # Aquí debe almacenar cuantas temperaturas hay en la lista
 
     # Colocar el bucle aqui......
+
+    for i in range(len(temp_dataloger)):
+
+        if ((temperatura_max is None) or (temperatura_max <= temp_dataloger[i])):
+            temperatura_max = temp_dataloger[i]
+
+        if ((temperatura_min is None) or (temperatura_min >= temp_dataloger[i])):
+            temperatura_min = temp_dataloger[i]
+
+        temperatura_sumatoria += temp_dataloger[i]
+
+
 
     # Al finalizar el bucle compare si el valor que usted calculó para
     # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -250,12 +262,27 @@ def ej4():
     # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
     # función "min" --> https://www.w3schools.com/python/ref_func_min.asp
 
+    print('\n\n1) La Temperatura Máxima es: {}'.format(temperatura_max))
+    print('La Temperatura Máxima obtenida con la función "max" es: {}'.format(max(temp_dataloger)))
+
+    print('\n2) La Temperatura Mínima es: {}'.format(temperatura_min))
+    print('La Temperatura Mínima obtenida con la función "min" es: {}\n'.format(min(temp_dataloger)))
+
+
+
     # Al finalizar el bucle debe calcular el promedio como:
     # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
 
-    # Corroboren los resultados de temperatura_sumatoria
+    temperatura_len = len(temp_dataloger)
+
+    temperatura_promedio = temperatura_sumatoria / temperatura_len
+
+    # Corrobore los resultados de temperatura_sumatoria
     # usando la función "sum"
     # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
+
+    print('3) La Temperatura Promedio es: {}'.format(temperatura_promedio))
+    print('La Temperatura Promedio obtenida con la función "sum" es: {}\n\n'.format(sum(temp_dataloger)/temperatura_len))
 
     '''
     Una vez que tengamos nuestros valores correctamente calculados debemos
@@ -276,6 +303,28 @@ def ej4():
     # ¿En qué época del año nos encontramos?
     # Imprima el resultado en pantalla
     # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+    invierno = [8, 14]
+    otonio = [11, 24]
+    primavera = [10, 24]
+    verano = [19, 28]
+
+    epoca_anio = None
+
+    if ((invierno[0] <= temperatura_min <= invierno[1]) and (invierno[0] <= temperatura_max <= invierno[1])):
+        epoca_anio = 'Invierno'
+
+    elif ((otonio[0] <= temperatura_min <= otonio[1]) and (otonio[0] <= temperatura_max <= otonio[1])):
+        epoca_anio = 'Otoño'
+
+    elif ((primavera[0] <= temperatura_min <= primavera[1]) and (primavera[0] <= temperatura_max <= primavera[1])):
+        epoca_anio = 'Primavera'
+
+    elif ((verano[0] <= temperatura_min <= verano[1]) and (verano[0] <= temperatura_max <= verano[1])):
+        epoca_anio = 'Verano'
+
+
+    print('La Provincia de Buenos Aires se Encuentra en la Siguiente Época del Año: {}\n\n'.format(epoca_anio))
 
 
 def ej5():
@@ -350,6 +399,6 @@ if __name__ == '__main__':
     print("\nEjercicios de práctica.\n")
     #ej1()
     #ej2()
-    ej3()
-    #ej4()
+    #ej3()
+    ej4()
     #ej5()
