@@ -123,19 +123,19 @@ def ej2():
 
 
 def ej3():
-    print("Mi organizador académico (#_#)")
+    print("Mi organizador académico (#_#): \n\n")
 
     '''
     Tome el ejercicio de "calificaciones":
     <condicionales_python / ejercicios_clase / ej3>,
     copielo a este ejercicio y modifíquelo para cumplir
-    el siguiente requerimiento
+    el siguiente requerimiento:
 
-    Las notas del estudinte se encuentran almacenadas en una
+    Las notas del estudiante se encuentran almacenadas en una
     lista llamada "notas" que ya hemos definido al comienzo del archivo
 
-    Debe caluclar el promedio de todas las notas y luego transformar
-    la califiación en una letra según la escala establecida en el ejercicio
+    Debe calcular el promedio de todas las notas y luego transformar
+    la calificación en una letra según la escala establecida en el ejercicio
     "calificaciones" <condicionales_python / ejercicios_clase / ej3>
 
     A medida que recorre las notas, no debe considerar como válidas aquellas
@@ -154,13 +154,54 @@ def ej3():
     # Realice aquí el bucle para recorrer todas las notas
     # y cacular la sumatoria
 
+    for i in range(len(notas)):
+        
+        if notas[i] >= 0:
+            sumatoria += notas[i]
+
+        else:
+            cantidad_ausentes += 1
+
+
+    cantidad_notas = len(notas) - cantidad_ausentes 
+
     # Terminado el bucle calcule el promedio como
     # promedio = sumatoria / cantidad_notas
+    promedio = sumatoria / cantidad_notas
 
     # Utilice la nota promedio calculada y transformela
     # a calificación con letras, imprima en pantalla el resultado
 
+        # Si el puntaje es mayor igual a 90 --> imprimir A
+    # Si el puntaje es mayor igual a 80 --> imprimir B
+    # Si el puntaje es mayor igual a 70 --> imprimir C
+    # Si el puntaje es mayor igual a 60 --> imprimir D
+    # Si el puntaje es menor a  60      --> imprimir F
+
+    # Debe imprimir en pantalla la calificacion
+    # Utilizar "if" anidados
+
+    if promedio >= 90:
+        print ('\nEl Alumno Obtuvo la Siguiente Calificación: A\n')
+
+    elif promedio >= 80:
+        print('\nEl Alumno Obtuvo la Siguiente Calificación: B\n')
+
+    elif promedio >= 70:
+        print('\nEl Alumno Obtuvo la Siguiente Calificación: C\n')
+
+    elif promedio >= 60:
+        print('\nEl Alumno Obtuvo la Siguiente Calificación: D\n')
+
+    else:
+        print('\nEl Alumno Obtuvo la Siguiente Calificación: F\n')
+
     # Imprima en pantalla al cantidad de ausentes
+    print('\nEl Promedio del Alumno fue: {}'.format(promedio))
+    print('\nLa Cantidad de Notas del Alumno sin Tener en cuenta los Ausentes son: {}'.format(cantidad_notas))
+    print('\nLa Cantidad de Ausentes son: {}'.format(cantidad_ausentes))
+    print('\nLa Suma de las Notas sin Tener en cuenta los Ausentes es: {}\n\n'.format(sumatoria))
+
 
 
 def ej4():
@@ -308,7 +349,7 @@ def ej5():
 if __name__ == '__main__':
     print("\nEjercicios de práctica.\n")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
