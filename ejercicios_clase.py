@@ -160,22 +160,38 @@ def ej6():
     # Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
     # sino que va hasta el anterior
 
-    inicio = int(input('Ingrese el primero número de la secuencia\n'))
-    # fin....
+    inicio = int(input('\n\nIngrese el 1er Número de la Secuencia: '))
+    fin = int(input('\nIngrese el 2do Número de la Secuencia: '))
 
-    cantidad_numeros_positivos = 0  # Inicializo el contador en 0
-    #cantidad_numeros_negativos
+    secuencia = list(range(inicio, fin + 1))
 
-    # for ... in range(....)
+    print('\n\nEl Rango Ingresado es: [{}, {}]'.format(inicio, fin))
+    print('\nLa Secuencia Armada es: {}'.format(secuencia))
+
+     # Inicializo los contadores en 0
+    cantidad_numeros_positivos = 0 
+    cantidad_numeros_negativos = 0
+
+    for i in range(len(secuencia)):
+
+        if secuencia[i] >= 0:
+            cantidad_numeros_positivos += 1
+        else:
+            cantidad_numeros_negativos += 1
+
+
+    print('\nLa Cantidad de Números que son Mayor/Igual a 0 es: {}'.format(cantidad_numeros_positivos))
+    print('\nLa Cantidad de Números que son Negativos es: {}\n\n'.format(cantidad_numeros_negativos))
+
 
     # Imprimir el valor de la cantidad de números positivos y negativos
 
 
 if __name__ == '__main__':
     print("\nBienvenidos a otra clase de Inove con Python.\n\n")
-    #ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej1()
+    ej2()
+    ej3()
+    ej4()
     ej5()
-    #ej6()
+    ej6()
