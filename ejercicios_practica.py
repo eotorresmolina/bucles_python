@@ -11,7 +11,7 @@ Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
+__author__ = "Torres Molina Emmanuel O."
 __email__ = "alumnos@inove.com.ar"
 __version__ = "1.1"
 
@@ -24,7 +24,7 @@ temp_dataloger = [12.8, 18.6, 14.5, 20.8, 12.1, 21.2, 13.5, 18.6,
 
 
 def ej1():
-    print('Comenzamos a ponernos serios!')
+    print('\nComenzamos a ponernos serios!.\n\n')
 
     '''
     Realice un programa que pida por consola dos números que representen
@@ -35,18 +35,32 @@ def ej1():
     sino que va hasta el anterior
     '''
 
-    # inicio = ....
-    # fin = ....
+    inicio = int(input('Ingrese el 1er Número Entero de la Secuencia: '))
+    fin = int(input('\nIngrese el 2do Número Entero de la Secuencia: ')) 
 
-    # cantidad_numeros ....
-    # sumatoria ....
+    # Inicialización de Variables:
+    cantidad_numeros = 0
+    sumatoria = 0
+
+    secuencia = list(range(inicio, fin + 1))
+
+    print('\n\nEl Rango Ingresado es: [{}, {}]'.format(inicio, fin))
+    print('\nLa Secuencia Armada es: {}'.format(secuencia))
 
     # bucle.....
+    for i in range(len(secuencia)):
+        cantidad_numeros = i + 1
+        sumatoria += secuencia[i]
 
     # Al terminar el bucle calcular el promedio como:
     # promedio = sumatoria / cantidad_numeros
+    promedio = sumatoria / cantidad_numeros
 
     # Imprimir resultado en pantalla
+    print('\n\nLa Cantidad de Números que hay en la Secuencia es: {}'.format(cantidad_numeros))
+    print('\nLa Sumatoria de los Números de la Secuencia es: {}'.format(sumatoria))
+    print('\nEl Promedio de los Números que están Dentro de la Secuencia es: {}\n\n'.format(promedio))
+
 
 
 def ej2():
@@ -248,8 +262,8 @@ def ej5():
 
 
 if __name__ == '__main__':
-    print("Ejercicios de práctica")
-    #ej1()
+    print("\nEjercicios de práctica.\n")
+    ej1()
     #ej2()
     #ej3()
     #ej4()
