@@ -426,7 +426,7 @@ def ej5():
                     if ((max_palabra is None) or (max_palabra <= palabras[i])):
                         max_palabra = palabras[i]
                 
-                print('\n\nLa Mayor Palabra Más Grande Alfabéticamente es: "{}"'.format(max_palabra))
+                print('\n\nLa Mayor Palabra Más Grande Alfabéticamente es: "{}"\n\n'.format(max_palabra))
 
 
             if opcion == 2:
