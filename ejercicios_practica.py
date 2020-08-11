@@ -426,7 +426,8 @@ def ej5():
                     if ((max_palabra is None) or (max_palabra <= palabras[i])):
                         max_palabra = palabras[i]
                 
-                print('\n\nLa Mayor Palabra Más Grande Alfabéticamente es: "{}"\n\n'.format(max_palabra))
+                print('\n\nLas Palabras Ingresadas son: {}'.format(palabras))
+                print('\nLa Mayor Palabra Más Grande Alfabéticamente es: "{}"\n\n'.format(max_palabra))
 
 
             if opcion == 2:
@@ -434,7 +435,8 @@ def ej5():
                     if ((max_cant_letras is None) or (len(max_cant_letras) <= len(str(palabras[i])))):
                         max_cant_letras = palabras[i]
 
-                print('\n\nLa Palabra que Tiene Mayor Cantidad de Letras es: "{}"\n\n'.format(max_cant_letras))
+                print('\n\nLas Palabras Ingresadas son: {}'.format(palabras))
+                print('\nLa Palabra que Tiene Mayor Cantidad de Letras es: "{}"\n\n'.format(max_cant_letras))
 
 
         elif opcion == 3:
