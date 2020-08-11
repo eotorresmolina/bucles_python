@@ -64,7 +64,7 @@ def ej1():
 
 
 def ej2():
-    print("Mi Calculadora (^_^)")
+    print("Mi Calculadora (^_^) :")
 
     '''
     Tome el ejercicio de clase:
@@ -73,9 +73,53 @@ def ej2():
     indefinidamente hasta que como operador se ingrese la palabra "FIN",
     en ese momento debe terminar el programa
 
-    Se debe debe imprimir un cartel de error si el operador ingresado no es
+    Se debe imprimir un cartel de error si el operador ingresado no es
     alguno de lo soportados o no es la palabra "FIN"
     '''
+    palabra = None
+
+    while ((palabra == None) or (palabra != 'FIN')):
+
+        numero_1 = float(input('\n\nIngrese un Número Real: '))
+        numero_2 = float (input('\nIngrese Otro Número Real: '))
+
+        print('\n\nAhora Ingrese el Símbolo de la Operación que Desee Calcular o la Palabra "FIN" para Finalizar el Programa.\n')
+        print('Suma (+)')
+        print('Resta (-)')
+        print('Multiplicación (*)')
+        print('División (/)')
+        print('Exponente/Potencia (**)\n')
+
+        palabra = str(input('Ingrese el Símbolo de la Operación o la Palabra "FIN": '))
+
+        if palabra == '+':
+            result = numero_1 + numero_2
+            print('\n\nEl Símbolo Ingresado es:"{}" y el Resultado de la Operación es: {}.'.format(palabra, result))
+
+        elif palabra == '-':
+            result = numero_1 - numero_2
+            print('\n\nEl Símbolo Ingresado es:"{}" y el Resultado de la Operación es: {}.\n\n'.format(palabra, result))
+
+        elif palabra == '*':
+            result = numero_1 * numero_2
+            print('\n\nEl Símbolo Ingresado es: "{}" y el Resultado de la Operación es: {}.\n\n'.format(palabra, result))
+
+        elif palabra == '/':
+            result = numero_1 / numero_2
+            print('\n\nEl Símbolo Ingresado es: "{}" y el Resultado de la Operación es: {}.\n\n'.format(palabra, result))
+
+        elif palabra == '**':
+            result = numero_1 ** numero_2
+            print('\n\nEl Símbolo Ingresado es: "{}" y el Resultado de la Operación es: {}.\n\n'.format(palabra, result))
+
+        else:
+
+            if palabra == 'FIN':
+                print('\n\nPrograma Finalizado.\n\n')
+
+            else:
+                print('\n\nEl Símbolo Ingresado: "{}" es un Símbolo Matemático Incorrecto.\n\n'.format(palabra))
+
 
 
 def ej3():
@@ -263,8 +307,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("\nEjercicios de práctica.\n")
-    ej1()
-    #ej2()
+    #ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
